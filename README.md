@@ -23,3 +23,7 @@ pnpm --filter web dev     # or business, admin, referrer
 ```
 
 This project uses Tailwind CSS and the new Next.js `app` router.
+
+## License
+
+This project is licensed under the MIT License.
