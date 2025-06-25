@@ -13,7 +13,13 @@ This repository contains a monorepo setup for **ReLoy**, a referral and loyalty 
 
 ## Getting Started
 
-Install dependencies and run the development server:
+First ensure that `pnpm` is installed globally:
+
+```bash
+npm install -g pnpm
+```
+
+Then install dependencies and run the development server:
 
 ```bash
 pnpm install
