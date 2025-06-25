@@ -1,0 +1,5 @@
+{
+  "name": "reloy",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"]
+}
