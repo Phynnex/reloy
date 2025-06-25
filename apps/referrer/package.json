@@ -8,15 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "workspace:*",
-    "react": "workspace:*",
-    "react-dom": "workspace:*",
-    "tailwindcss": "workspace:*",
-    "postcss": "workspace:*",
-    "autoprefixer": "workspace:*",
-    "typescript": "workspace:*",
-    "@shadcn/ui": "workspace:*",
-    "react-icons": "workspace:*",
-    "lucide-react": "workspace:*"
+    "@shadcn/ui": "^0.0.4",
+    "autoprefixer": "^10.0.1",
+    "lucide-react": "^0.294.0",
+    "next": "14.0.4",
+    "postcss": "^8",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.5.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
   }
 }
