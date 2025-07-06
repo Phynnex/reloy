@@ -10,6 +10,7 @@ This repository contains a monorepo setup for **ReLoy**, a referral and loyalty 
 - `apps/admin` – admin portal
 - `apps/referrer` – referrer dashboard
 - `packages/ui` – shared UI components (placeholder)
+- `packages/design-tokens` – shared design tokens used by all apps
 
 ## Getting Started
 
@@ -29,6 +30,19 @@ pnpm --filter web dev     # or business, admin, referrer
 ```
 
 This project uses Tailwind CSS and the new Next.js `app` router.
+
+## Design Tokens
+
+Shared design tokens live in `packages/design-tokens`. Tailwind configurations
+for each app import these tokens and expose them as utilities.
+
+To add a new token:
+
+1. Edit `packages/design-tokens/index.js` and add your value.
+2. Restart the dev server so Tailwind picks up the change.
+
+Use the token name in your components, e.g. `className="text-primary"` or
+`className="bg-accent-1"`.
 
 ## License
 
