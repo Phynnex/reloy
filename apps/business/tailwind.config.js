@@ -1,3 +1,5 @@
+const tokens = require('../../packages/design-tokens');
+
 module.exports = {
   content: [
     './src/app/**/*.{ts,tsx}',
@@ -5,7 +7,13 @@ module.exports = {
     '../../packages/**/*.{ts,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: tokens.colors,
+      spacing: tokens.spacing,
+      borderRadius: tokens.borderRadius,
+      fontFamily: tokens.fontFamily,
+      fontSize: tokens.fontSize,
+    },
   },
   plugins: [],
 };
