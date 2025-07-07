@@ -14,10 +14,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
-    "paths": {
-      "@reloy/ui/*": ["packages/ui/*"],
-      "@reloy/design-tokens": ["packages/design-tokens/index.js"]
-    }
+
+    "paths": { "@/*": ["src/*"] }
+
   },
   "include": ["apps/**/*", "packages/**/*"],
   "exclude": ["node_modules"]
