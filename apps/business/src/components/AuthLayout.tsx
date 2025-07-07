@@ -33,7 +33,13 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
           </p>
           <Image
             src={AuthIllustration}
+
             alt="Authentication illustration"
+
+        
+            width={398}
+            height={310}
+
             className="mt-8 h-64 w-64"
           />
         </div>

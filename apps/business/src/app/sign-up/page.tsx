@@ -3,7 +3,6 @@ import { useRouter } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { FaGoogle } from "react-icons/fa";
 import AuthLayout from "@/components/AuthLayout";
 import { RiBriefcase4Line } from "react-icons/ri";
 import { FcGoogle } from "react-icons/fc";
