@@ -41,7 +41,7 @@ const tokens = {
     full: '9999px'
   },
   fontFamily: {
-    sans: ['Inter', 'sans-serif'],
+    sans: ['"Public Sans"', 'sans-serif'],
   },
   fontSize: {
     xs: '12px',
