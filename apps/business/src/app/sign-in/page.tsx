@@ -12,7 +12,6 @@ export default function SignIn() {
 
   return (
     <AuthLayout>
-      <Link href="/" className="text-2xl font-bold text-primary">ReLoy Business</Link>
       <div className="flex max-w-md w-full border-b border-stroke-grey text-sm font-medium">
         <button
           className={cn('flex-1 py-2', tab === 'email' ? 'border-b-2 border-primary text-primary' : 'text-gray500')}

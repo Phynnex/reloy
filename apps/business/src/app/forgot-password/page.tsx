@@ -7,7 +7,6 @@ import AuthLayout from '@/components/AuthLayout';
 export default function ForgotPassword() {
   return (
     <AuthLayout>
-      <Link href="/" className="text-2xl font-bold text-primary">ReLoy Business</Link>
       <form className="w-full max-w-md space-y-4">
         <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
