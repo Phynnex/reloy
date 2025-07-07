@@ -1,21 +1,23 @@
 import type { ReactNode } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
-import { Logo, AuthLeftBg, AuthRightBg, AuthIllustration } from '@reloy/ui/assets';
+import { Logo, AuthIllustration } from '@reloy/ui/assets';
 
 export default function AuthLayout({ children }: { children: ReactNode }) {
   return (
     <div className="flex h-screen flex-col overflow-hidden md:flex-row">
-      <div className="relative flex w-full flex-col items-center gap-8 p-8 md:w-1/2">
-        <Link href="/" className="mb-8 flex items-center gap-2">
+      <div className="relative flex w-full flex-col gap-8 p-8 md:w-1/2">
+        <Link href="/" className="mb-8 flex items-center gap-2 ml-4">
           <Logo className="h-10 w-10" />
           <span className="text-2xl font-bold text-heading">ReLoy Business</span>
         </Link>
         {children}
-        <AuthRightBg className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover opacity-20" />
+       
       </div>
-      <div className="relative hidden w-full flex-col items-center justify-center bg-light-blue p-8 md:flex md:w-1/2">
-        <AuthLeftBg className="absolute inset-0 h-full w-full object-cover" />
+
+
+
+      <div className="relative hidden w-full flex-col items-center justify-center bg-[#ECF3FF] p-8 md:flex md:w-1/2">
         <div className="relative z-10 flex flex-col items-center justify-center text-center">
           <p
             className="mb-4 text-4xl font-medium"
@@ -33,10 +35,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
           </p>
           <Image
             src={AuthIllustration}
-
             alt="Authentication illustration"
-
-        
             width={398}
             height={310}
 
