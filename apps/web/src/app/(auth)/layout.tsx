@@ -10,7 +10,12 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
         <div className="relative z-10 p-10 text-center">
           <p
             className="text-lg font-medium text-heading"
-            style={{ background: 'linear-gradient(270deg, #605BFF 0%, #233E97 100%)', WebkitBackgroundClip: 'text', color: 'transparent' }}
+            style={{
+              background: 'linear-gradient(270deg, #605BFF 0%, #233E97 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              color: 'transparent',
+            }}
           >
             Turn your customers into loyal promoters.
           </p>
