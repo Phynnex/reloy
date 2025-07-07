@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Link from 'next/link';
+import Image from 'next/image';
 import { Logo, AuthLeftBg, AuthRightBg, AuthIllustration } from '@reloy/ui/assets';
 
 export default function AuthLayout({ children }: { children: ReactNode }) {
@@ -30,7 +31,17 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
           <p>
             Reward your customers every time they share <br /> and refer others to your business.
           </p>
-          <AuthIllustration className="mt-8 h-64 w-64" />
+          <Image
+            src={AuthIllustration}
+
+            alt="Authentication illustration"
+
+        
+            width={398}
+            height={310}
+
+            className="mt-8 h-64 w-64"
+          />
         </div>
       </div>
     </div>
