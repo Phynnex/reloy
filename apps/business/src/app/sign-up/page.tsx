@@ -15,13 +15,13 @@ export default function BusinessSignUp() {
   const router = useRouter();
   return (
     <AuthLayout>
-      <div className="w-full overflow-y-scroll">
+      <div className="w-full overflow-y-scroll hide-scrollbar">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900 ml-4 ">Create a Business Account</h1>
         <p className="text-sm text-gray-600 ml-4">Please fill in your details to create an account</p>
       </div>
       <form
-        className="ml-4 w-full max-w-md space-y-4"
+        className="ml-4 w-full max-w-md space-y-4 "
         onSubmit={(e) => {
           e.preventDefault();
           router.push('/verify-email');
