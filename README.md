@@ -9,6 +9,7 @@ This repository contains a monorepo setup for **ReLoy**, a referral and loyalty 
 - `apps/business` – business dashboard
 - `apps/admin` – admin portal
 - `apps/referrer` – referrer dashboard
+- `apps/api` – GraphQL API server
 - `packages/ui` – shared UI components (placeholder)
 - `packages/design-tokens` – shared design tokens used by all apps
 
@@ -25,7 +26,7 @@ Then install dependencies and run the development server:
 ```bash
 pnpm install
 
-pnpm --filter web dev     # or business, admin, referrer
+pnpm --filter web dev     # or business, admin, referrer, api
 
 ```
 
