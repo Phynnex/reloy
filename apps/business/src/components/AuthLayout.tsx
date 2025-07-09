@@ -2,40 +2,115 @@ import type { ReactNode } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@reloy/ui/assets/logo.svg';
-import AuthLeftBg from '@reloy/ui/assets/auth-left-bg.svg';
-import AuthRightBg from '@reloy/ui/assets/auth-right-bg.svg';
+
 import AuthIllustration from '@reloy/ui/assets/auth/auth-illustration.svg';
-import TopRightLeftSection from '@reloy/ui/assets/auth/top-right-left-section.png';
+import TopRightLeftSection from '@reloy/ui/assets/auth/top-right-left-section.svg';
+import BottomLeftLeftSection from '@reloy/ui/assets/auth/bottom-left-left-section.svg';
+import BottomRightSection from '@reloy/ui/assets/auth/bottom-right-section.svg';
+
+
+
+//   export default function AuthLayout({ children }: { children: ReactNode }) {
+//   return (  
+//     <div className="flex h-screen flex-col md:flex-row overflow-hidden">
+//       {/* LEFT: Form Panel */}
+//       <div className="relative flex flex-col justify-center items-center md:w-1/2 bg-white ">
+//         <div className="w-full max-w-xl  py-8">
+//           <Link href="/" className="mb-8 flex items-center gap-2">
+//             <Image src={Logo} alt="logo" width={110} height={21} />
+//           </Link>
+//           <Image
+//             src={TopRightLeftSection}
+//             alt=""
+//             width={35}
+//             height={35}
+//             className="pointer-events-none absolute right-6 top-0 z-0 object-cover"
+//           />
+//           {children}
+//         </div>
+//         <Image
+//           src={BottomLeftLeftSection}
+//           alt=""
+//           width={30}
+//           height={30}
+//           className="pointer-events-none absolute left-0 bottom-0 z-0 object-cover"
+//         />
+//       </div>
+
+//       <div className="relative hidden md:flex flex-col justify-center items-center md:w-1/2 bg-[#ECF3FF4D]">
+//         <div className="relative flex flex-col items-center justify-center text-center w-full px-8">
+//          <p
+//             className="mb-4 text-4xl font-medium"
+//             style={{
+//               background: 'linear-gradient(270deg, #605BFF 0%, #233E97 100%)',
+//               WebkitBackgroundClip: 'text',
+//               WebkitTextFillColor: 'transparent',
+//               color: 'transparent',
+//             }}
+//           >
+//             Turn your customers into loyal <br/> promoters.
+//           </p>
+//           <p>
+//             Reward your customers every time they share <br /> and refer others to your business.
+//           </p>
+//           <Image
+//             src={AuthIllustration}
+//             alt="Authentication illustration"
+//             width={398}
+//             height={310}
+//             className="mt-8"
+//           />
+//         </div>
+//           <Image
+//             src={BottomRightSection}
+//             alt=""
+//             className="pointer-events-none absolute right-0 bottom-0 object-cover w-full"
+//           />
+//       </div>
+//     </div>
+
+
+//   );
+// }
+
+
 
 export default function AuthLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex h-screen flex-col overflow-hidden md:flex-row">
-      <div className="relative flex w-full flex-col items-center gap-8 p-8 md:w-1/2">
-        <Link href="/" className="mb-8 flex items-center gap-2">
-          {/* <Image src={Logo} alt="" width={40} height={40} className="h-10 w-10" /> */}
-     <Image
-  src="../../../../packages/ui/assets/logo.svg"
-  alt=""
-  width={40}
-  height={40}
-  className="h-10 w-10"
-/>
-          {/* <span className="text-2xl font-bold text-heading">ReLoy Business</span> */}
-        </Link>
-        <Image
-  src={TopRightLeftSection}
-  alt=""
-  fill
- width={10}
-  className="pointer-events-none absolute right-0 inset-0 -z-10 object-cover "
-/>
-        {children}
+    <div className="flex h-screen flex-col md:flex-row overflow-hidden">
+      {/* LEFT PANEL */}
+      <div className="relative flex flex-col md:w-1/2 h-screen bg-white">
+        {/* Logo always visible */}
+        <div className="shrink-0 p-8 px-8 md:px-16 lg:px-24 ">
+          <Link href="/" className="flex items-center gap-2">
+            <Image src={Logo} alt="logo" width={110} height={21} />
+          </Link>
+        </div>
+          <Image
+            src={TopRightLeftSection}
+            alt=""
+            width={35}
+            height={35}
+            className="pointer-events-none absolute right-6 top-0 z-0 object-cover"
+          />
+        {/* Scrollable form/content */}
+        <div className="flex-1 min-h-0 overflow-y-auto px-8 md:px-16 lg:px-24 pb-8 relative hide-scrollbar">
+          {children}
+        </div>
+          <Image
+            src={BottomLeftLeftSection}
+            alt=""
+            width={30}
+            height={30}
+            className="pointer-events-none absolute left-0 bottom-0 z-0 object-cover"
+          />
       </div>
-      <div className="relative hidden w-full flex-col items-center justify-center bg-light-blue p-8 md:flex md:w-1/2">
-        <Image src="../../../../packages/ui/assets/auth/bottom-left-left-section.svg" alt="" fill className="absolute inset-0 object-cover" />
-        <div className="relative z-10 flex flex-col items-center justify-center text-center">
+
+      {/* RIGHT PANEL */}
+      <div className="relative hidden md:flex flex-col justify-center items-center md:w-1/2 bg-[#ECF3FF4D]">
+        <div className="relative flex flex-col items-center justify-center text-center w-full px-8">
           <p
-            className="mb-4 text-4xl font-medium"
+            className="mb-4 lg:text-[40px] md:text-2xl font-bold"
             style={{
               background: 'linear-gradient(270deg, #605BFF 0%, #233E97 100%)',
               WebkitBackgroundClip: 'text',
@@ -43,9 +118,9 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
               color: 'transparent',
             }}
           >
-            Turn your customers into loyal promoters.
+            Turn your customers into loyal  promoters.
           </p>
-          <p>
+          <p className="lg:text-base md:text-sm">
             Reward your customers every time they share <br /> and refer others to your business.
           </p>
           <Image
@@ -53,9 +128,14 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
             alt="Authentication illustration"
             width={398}
             height={310}
-            className="mt-8 h-64 w-64"
+            className="mt-8"
           />
         </div>
+        <Image
+          src={BottomRightSection}
+          alt=""
+          className="pointer-events-none absolute right-0 bottom-0 object-cover w-full"
+        />
       </div>
     </div>
   );
