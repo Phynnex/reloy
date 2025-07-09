@@ -68,6 +68,21 @@ To add a new token:
 Use the token name in your components, e.g. `className="text-primary"` or
 `className="bg-accent-1"`.
 
+## Managing Dependencies
+
+Running `pnpm add <pkg>` from the repository root will trigger `ERR_PNPM_ADDING_TO_ROOT`.
+
+Install a dependency for a specific app by running one of the following:
+
+```bash
+cd apps/web && pnpm add <pkg>
+# or
+pnpm add --filter ./apps/web <pkg>
+```
+
+In the rare case that a package truly belongs in the root workspace, use the
+`-w`/`--workspace-root` flag with `pnpm add`.
+
 ## License
 
 This project is licensed under the MIT License.
