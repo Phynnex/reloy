@@ -34,9 +34,9 @@ export default function BusinessSignUp() {
   return (
     <AuthLayout>
       <div className="w-full">
-        <div className="mb-8">
-          <h1 className="text-2xl font-bold text-gray-900">Create a Business Account</h1>
-          <p className="text-sm text-gray-600">Please fill in your details to create an account</p>
+        <div className="mt-8 md:mt-10 lg:mt-12 mb-8">
+          <h1 className="text-xl  lg:text-[29px] font-semibold text-heading">Create your Account</h1>
+          <p className="text-xs lg:text-sm text-body">Please fill in your details to create an account</p>
         </div>
         <form
           className="w-full max-w-xl space-y-4"
@@ -56,7 +56,7 @@ export default function BusinessSignUp() {
                 value={businessName}
                 onChange={e => setBusinessName(e.target.value)}
               />
-              <RiBriefcase4Line className="absolute right-3 top-1/2 -translate-y-1/2 text-gray5" />
+              <RiBriefcase4Line  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray5" />
             </div>
           </div>
           <div className="space-y-2">
@@ -123,7 +123,7 @@ export default function BusinessSignUp() {
           </div>
           <p className="text-center text-body md:text-sm pt-4 text-xs">
             By Signing up, you agree to the
-            <Link href="/policy" className="hover:underline ml-2 font-semibold">Terms of Use</Link>
+            <Link href="/policy" className="hover:underline ml-2 font-semibold">Terms of Use </Link>
             and Privacy Policy of
             <Link href="/policy" className="hover:underline ml-2 font-semibold">SharePro</Link>
           </p>

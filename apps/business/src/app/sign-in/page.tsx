@@ -38,7 +38,7 @@ export default function SignIn() {
 
   return (
     <AuthLayout>
-      <div className="w-full max-w-md mt-12 md:mt-16">
+      <div className="w-full max-w-xl mt-12 md:mt-16">
         <h2 className="text-[29px] font-semibold mb-1 text-heading">Welcome back!</h2>
         <p className="text-sm text-body mb-8">Please sign in to access your account</p>
 
@@ -70,7 +70,7 @@ export default function SignIn() {
           </button>
         </div>
 
-        <form className="w-full max-w-md space-y-4 mx-auto" onSubmit={handleSubmit}>
+        <form className="w-full max-w-xl space-y-4 " onSubmit={handleSubmit}>
           {tab === 'email' ? (
             <div className="space-y-2">
               <Label htmlFor="email">Email Address</Label>
@@ -132,7 +132,7 @@ export default function SignIn() {
         </form>
 
         {/* Footer Links */}
-        <div className="flex w-full max-w-md mx-auto justify-start text-sm mt-4">
+        <div className="flex w-full max-w-xl mx-auto justify-start text-sm mt-4">
           <span>Don&apos;t have an account?&nbsp;</span>
           <Link href="/sign-up" className="text-primary font-semibold hover:underline">Sign up</Link>
         </div>

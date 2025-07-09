@@ -9,72 +9,6 @@ import BottomLeftLeftSection from '@reloy/ui/assets/auth/bottom-left-left-sectio
 import BottomRightSection from '@reloy/ui/assets/auth/bottom-right-section.svg';
 
 
-
-//   export default function AuthLayout({ children }: { children: ReactNode }) {
-//   return (  
-//     <div className="flex h-screen flex-col md:flex-row overflow-hidden">
-//       {/* LEFT: Form Panel */}
-//       <div className="relative flex flex-col justify-center items-center md:w-1/2 bg-white ">
-//         <div className="w-full max-w-xl  py-8">
-//           <Link href="/" className="mb-8 flex items-center gap-2">
-//             <Image src={Logo} alt="logo" width={110} height={21} />
-//           </Link>
-//           <Image
-//             src={TopRightLeftSection}
-//             alt=""
-//             width={35}
-//             height={35}
-//             className="pointer-events-none absolute right-6 top-0 z-0 object-cover"
-//           />
-//           {children}
-//         </div>
-//         <Image
-//           src={BottomLeftLeftSection}
-//           alt=""
-//           width={30}
-//           height={30}
-//           className="pointer-events-none absolute left-0 bottom-0 z-0 object-cover"
-//         />
-//       </div>
-
-//       <div className="relative hidden md:flex flex-col justify-center items-center md:w-1/2 bg-[#ECF3FF4D]">
-//         <div className="relative flex flex-col items-center justify-center text-center w-full px-8">
-//          <p
-//             className="mb-4 text-4xl font-medium"
-//             style={{
-//               background: 'linear-gradient(270deg, #605BFF 0%, #233E97 100%)',
-//               WebkitBackgroundClip: 'text',
-//               WebkitTextFillColor: 'transparent',
-//               color: 'transparent',
-//             }}
-//           >
-//             Turn your customers into loyal <br/> promoters.
-//           </p>
-//           <p>
-//             Reward your customers every time they share <br /> and refer others to your business.
-//           </p>
-//           <Image
-//             src={AuthIllustration}
-//             alt="Authentication illustration"
-//             width={398}
-//             height={310}
-//             className="mt-8"
-//           />
-//         </div>
-//           <Image
-//             src={BottomRightSection}
-//             alt=""
-//             className="pointer-events-none absolute right-0 bottom-0 object-cover w-full"
-//           />
-//       </div>
-//     </div>
-
-
-//   );
-// }
-
-
-
 export default function AuthLayout({ children }: { children: ReactNode }) {
   return (
     <div className="flex h-screen flex-col md:flex-row overflow-hidden">
@@ -120,14 +54,14 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
           >
             Turn your customers into loyal  promoters.
           </p>
-          <p className="lg:text-base md:text-sm">
+          <p className="lg:text-base md:text-sm text-body">
             Reward your customers every time they share <br /> and refer others to your business.
           </p>
           <Image
             src={AuthIllustration}
             alt="Authentication illustration"
-            width={398}
-            height={310}
+            width={296}
+            height={208}
             className="mt-8"
           />
         </div>

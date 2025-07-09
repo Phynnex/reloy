@@ -14,8 +14,8 @@ export default function VerifyEmail() {
 
   return (
     <AuthLayout>
-  <div className="w-full max-w-md  mt-16 md:mt-28">
-    <div className="w-full max-w-md space-y-4 ">
+  <div className="w-full max-w-xl  mt-16 md:mt-28">
+    <div className="w-full max-w-xl space-y-4 ">
       <button
   type="button"
   aria-label="Back"
@@ -26,10 +26,10 @@ export default function VerifyEmail() {
 </button>
 
       <h2 className="text-heding text-2xl font-semibold mb-2">Verify Your Email</h2>
-      <p className="text-body text-base mb-12">
+      <p className="text-body text-base ">
         We've sent a verification link to your email anga*******@gmail.com. Please check your inbox and click the link to continue.
       </p>
-      <Button className="w-full" onClick={() => router.push('/otp')}>Continue</Button>
+      <Button className="w-full " onClick={() => router.push('/otp')}>Continue</Button>
       <Button variant="outline" className="w-full">Resend Verification Email</Button>
     </div>
   </div>

@@ -49,64 +49,8 @@ export default function OtpPage() {
   };
 
   return (
-    // <AuthLayout>
-    //   <div className="w-full max-w-md  mt-12 md:mt-20">
-    //     {/* Back Button */}
-    //     <button
-    //       type="button"
-    //       aria-label="Back"
-    //       onClick={() => router.back()}
-    //       className="mb-6 p-2 rounded-sm bg-[#EBF0FF] hover:bg-muted transition-colors"
-    //     >
-    //       <FaChevronLeft className="w-5 h-5 text-primary" />
-    //     </button>
-    //     {/* Main Card */}
-    //     <h2 className="text-heding text-2xl font-semibold mb-2">Check your email</h2>
-    //     <p className="text-body text-base mb-6">
-    //       Enter the 6-digit code we sent to your email address.
-    //     </p>
-
-    //     {/* OTP Inputs */}
-    //     <div className="flex items-center gap-4 mb-4">
-    //       {otp.map((digit, idx) => (
-    //         <input
-    //           key={idx}
-    //           ref={inputRefs[idx]}
-    //           type="text"
-    //           inputMode="numeric"
-    //           maxLength={1}
-    //           className="w-16 h-16 rounded-md border border-gray-300 text-center text-2xl font-medium focus:outline-none focus:ring-2 focus:ring-primary transition"
-    //           value={digit}
-    //           onChange={e => handleChange(idx, e.target.value)}
-    //           onKeyDown={e => handleBackspace(idx, e)}
-    //           autoFocus={idx === 0}
-    //         />
-    //       ))}
-    //     </div>
-
-    //     {/* Timer */}
-    //     <div className="flex gap-2 mb-6 text-body text-base">
-    //       Code expires in <p className="font-medium">00:{timer.toString().padStart(2, '0')}</p>
-    //     </div>
-
-    //     {/* Submit */}
-    //     <Button className="w-full mb-2" type="submit" disabled={otpValue.length < 6}>
-    //       Verify email
-    //     </Button>
-
-    //     {/* Resend Link */}
-    //     <div className="text-sm mb-6">
-    //       Didn't get code?{' '}
-    //       <button type="button" className="text-primary font-medium hover:underline" onClick={() => setTimer(59)}>
-    //         Resend code
-    //       </button>
-    //     </div>
-    //   </div>
-    // </AuthLayout>
-
-
     <AuthLayout>
-  <form className="w-full max-w-md mt-12 md:mt-20" onSubmit={handleSubmit}>
+  <form className="w-full max-w-xl mt-12 md:mt-20" onSubmit={handleSubmit}>
     {/* Back Button, h2, p, etc */}
     <button
       type="button"
@@ -122,7 +66,7 @@ export default function OtpPage() {
     </p>
 
     {/* OTP Inputs */}
-    <div className="flex items-center gap-2 lg:gap-4 mb-4">
+    {/* <div className="flex  items-center gap-2 lg:gap-4 mb-4">
       {otp.map((digit, idx) => (
         <input
           key={idx}
@@ -137,7 +81,25 @@ export default function OtpPage() {
           autoFocus={idx === 0}
         />
       ))}
-    </div>
+    </div> */}
+    {/* OTP Inputs */}
+<div className="flex w-full gap-2 lg:gap-4 mb-4">
+  {otp.map((digit, idx) => (
+    <input
+      key={idx}
+      ref={inputRefs[idx]}
+      type="text"
+      inputMode="numeric"
+      maxLength={1}
+      className="flex-1 min-w-0 h-12 md:h-14 lg:h-16 rounded-md border border-gray-300 text-center text-2xl font-medium focus:outline-none focus:ring-2 focus:ring-primary transition"
+      value={digit}
+      onChange={e => handleChange(idx, e.target.value)}
+      onKeyDown={e => handleBackspace(idx, e)}
+      autoFocus={idx === 0}
+    />
+  ))}
+</div>
+
 
     {/* Timer */}
     <div className="flex gap-2 mb-6 text-body text-base">
