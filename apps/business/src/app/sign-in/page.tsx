@@ -82,7 +82,7 @@ export default function SignIn() {
                   value={email}
                   onChange={e => setEmail(e.target.value)}
                 />
-                <HiOutlineMail className="absolute right-3 top-1/2 -translate-y-1/2 text-gray5" />
+                <HiOutlineMail size={20}  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray5" />
               </div>
             </div>
           ) : (

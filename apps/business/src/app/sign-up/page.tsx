@@ -39,7 +39,7 @@ export default function BusinessSignUp() {
           <p className="text-sm text-gray-600">Please fill in your details to create an account</p>
         </div>
         <form
-          className="w-full max-w-md space-y-4"
+          className="w-full max-w-xl space-y-4"
           onSubmit={e => {
             e.preventDefault();
             if (isFormValid) {
