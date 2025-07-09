@@ -32,6 +32,29 @@ pnpm --filter web dev     # or business, admin, referrer, api
 
 This project uses Tailwind CSS and the new Next.js `app` router.
 
+## Managing Dependencies
+
+This repo is a **pnpm workspace**. Running `pnpm add <pkg>` in the repo root
+will try to add the dependency to the workspace root and pnpm will show
+`ERR_PNPM_ADDING_TO_ROOT`.
+
+To add a dependency to one of the apps (for example the business dashboard):
+
+```bash
+cd apps/business
+pnpm add <pkg>
+```
+
+Alternatively, from the root you can target a workspace using pnpm's filter
+syntax:
+
+```bash
+pnpm add --filter ./apps/business <pkg>
+```
+
+Only use the `-w`/`--workspace-root` flag when the dependency truly belongs in
+the root package.
+
 ## Design Tokens
 
 Shared design tokens live in `packages/design-tokens`. Tailwind configurations
@@ -44,6 +67,21 @@ To add a new token:
 
 Use the token name in your components, e.g. `className="text-primary"` or
 `className="bg-accent-1"`.
+
+## Managing Dependencies
+
+Running `pnpm add <pkg>` from the repository root will trigger `ERR_PNPM_ADDING_TO_ROOT`.
+
+Install a dependency for a specific app by running one of the following:
+
+```bash
+cd apps/web && pnpm add <pkg>
+# or
+pnpm add --filter ./apps/web <pkg>
+```
+
+In the rare case that a package truly belongs in the root workspace, use the
+`-w`/`--workspace-root` flag with `pnpm add`.
 
 ## License
 
