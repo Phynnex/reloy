@@ -30,6 +30,10 @@ pnpm --filter web dev     # or business, admin, referrer, api
 
 ```
 
+Each app requires `NEXT_PUBLIC_API_URL` to be defined in its environment. Set
+this variable when running or deploying the app so the frontend can communicate
+with the GraphQL API server.
+
 This project uses Tailwind CSS and the new Next.js `app` router.
 
 ## Managing Dependencies
