@@ -9,7 +9,8 @@ This repository contains a monorepo setup for **ReLoy**, a referral and loyalty 
 - `apps/business` – business dashboard
 - `apps/admin` – admin portal
 - `apps/referrer` – referrer dashboard
-- `apps/api` – GraphQL API server
+- `apps/api` – GraphQL API server (uses the `PORT` environment variable and
+  defaults to `4000`)
 - `packages/ui` – shared UI components (placeholder)
 - `packages/design-tokens` – shared design tokens used by all apps
 
@@ -35,6 +36,9 @@ Copy `.env.example` to `.env` and update the values for your environment:
 cp .env.example .env
 # edit .env and set the variables
 ```
+
+The `PORT` variable sets the port for `apps/api`. If omitted, the server will
+listen on port `4000`.
 
 The default `NEXT_PUBLIC_API_URL` points to the shared API endpoint at
 `https://7bc4d325f649.ngrok-free.app/graphql`.
