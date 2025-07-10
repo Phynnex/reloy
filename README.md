@@ -36,8 +36,8 @@ cp .env.example .env
 # edit .env and set the variables
 ```
 
-The default `NEXT_PUBLIC_API_URL` assumes the API server runs on
-`http://localhost:4000/graphql`.
+The default `NEXT_PUBLIC_API_URL` points to the shared API endpoint at
+`https://7bc4d325f649.ngrok-free.app/graphql`.
 
 Each app requires `NEXT_PUBLIC_API_URL` to be defined in its environment. Set
 this variable when running or deploying the app so the frontend can communicate
