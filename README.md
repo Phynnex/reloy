@@ -29,6 +29,15 @@ pnpm install
 pnpm --filter web dev     # or business, admin, referrer, api
 
 ```
+Copy `.env.example` to `.env` and update the values for your environment:
+
+```bash
+cp .env.example .env
+# edit .env and set the variables
+```
+
+The default `NEXT_PUBLIC_API_URL` assumes the API server runs on
+`http://localhost:4000/graphql`.
 
 This project uses Tailwind CSS and the new Next.js `app` router.
 
