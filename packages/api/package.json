@@ -2,5 +2,7 @@
   "name": "@reloy/api",
   "version": "0.0.1",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@apollo/client": "^3.8.0"
+  }
 }
