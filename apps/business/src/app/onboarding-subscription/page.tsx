@@ -7,7 +7,6 @@ import { cn } from '@/lib/utils';
 import {
   Dialog,
   DialogContent,
-  DialogOverlay,
   DialogTrigger,
 } from '@/components/ui/dialog';
 
@@ -244,7 +243,7 @@ export default function SubscriptionPlanPage() {
                   Continue
                 </button>
               </DialogTrigger>
-              <DialogOverlay />
+              
               <DialogContent className="max-w-md w-full flex flex-col items-center gap-6 py-12">
                 {/* Success Icon */}
                 <div className="bg-[#E7F7ED] rounded-full flex items-center justify-center w-16 h-16 mb-4">
