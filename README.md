@@ -36,8 +36,8 @@ cp .env.example .env
 # edit .env and set the variables
 ```
 
-The default `NEXT_PUBLIC_API_URL` assumes the API server runs on
-`http://localhost:4000/graphql`.
+The default `NEXT_PUBLIC_API_URL` points to the shared API endpoint at
+`https://7bc4d325f649.ngrok-free.app/graphql`.
 
 Each app requires `NEXT_PUBLIC_API_URL` to be defined in its environment. Set
 this variable when running or deploying the app so the frontend can communicate
@@ -47,25 +47,25 @@ This project uses Tailwind CSS and the new Next.js `app` router.
 
 ## Managing Dependencies
 
-This repo is a **pnpm workspace**. Running `pnpm add <pkg>` in the repo root
-will try to add the dependency to the workspace root and pnpm will show
-`ERR_PNPM_ADDING_TO_ROOT`.
+This repo uses a **pnpm workspace**. Running `pnpm add <pkg>` at the repository
+root fails with `ERR_PNPM_ADDING_TO_ROOT` because dependencies must be installed
+inside a workspace.
 
-To add a dependency to one of the apps (for example the business dashboard):
+Install a package from within the desired app or package directory:
 
 ```bash
 cd apps/business
 pnpm add <pkg>
 ```
 
-Alternatively, from the root you can target a workspace using pnpm's filter
-syntax:
+You can also add a dependency from the root by targeting a workspace with the
+`--filter` option:
 
 ```bash
 pnpm add --filter ./apps/business <pkg>
 ```
 
-Only use the `-w`/`--workspace-root` flag when the dependency truly belongs in
+Use the `-w`/`--workspace-root` flag only when the dependency truly belongs in
 the root package.
 
 ## Design Tokens
@@ -81,20 +81,6 @@ To add a new token:
 Use the token name in your components, e.g. `className="text-primary"` or
 `className="bg-accent-1"`.
 
-## Managing Dependencies
-
-Running `pnpm add <pkg>` from the repository root will trigger `ERR_PNPM_ADDING_TO_ROOT`.
-
-Install a dependency for a specific app by running one of the following:
-
-```bash
-cd apps/web && pnpm add <pkg>
-# or
-pnpm add --filter ./apps/web <pkg>
-```
-
-In the rare case that a package truly belongs in the root workspace, use the
-`-w`/`--workspace-root` flag with `pnpm add`.
 
 ## License
 
