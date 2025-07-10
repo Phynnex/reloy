@@ -8,8 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@apollo/client": "^3.13.8",
     "@radix-ui/react-dialog": "^1.1.14",
+=======
+>>>>>>> d183ee271029888dd0fcedca10a9972095978fdd
     "@shadcn/ui": "^0.0.4",
     "autoprefixer": "^10.0.1",
     "graphql": "^16.11.0",
@@ -20,6 +23,7 @@
     "react-dom": "^18",
     "react-icons": "^5.5.0",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "@reloy/api": "workspace:*"
   }
 }
