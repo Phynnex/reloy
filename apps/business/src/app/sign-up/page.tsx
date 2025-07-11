@@ -23,8 +23,6 @@ export default function BusinessSignUp() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   // Validation logic
   const isFormValid =
@@ -35,56 +33,9 @@ export default function BusinessSignUp() {
     confirmPassword &&
     password === confirmPassword;
 
-const handleSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
+const handleSignUp = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
-  setLoading(true);
-  setError(null);
-  
-  // GraphQL Mutation for the Sign-Up
-  const query = `
-    mutation signUp($businessName: String!, $businessEmail: String!, $phoneNumber: String!, $password: String!) {
-      signUp(input: { businessName: $businessName, businessEmail: $businessEmail, phoneNumber: $phoneNumber, password: $password }) {
-        token
-        user {
-          id
-          businessName
-        }
-      }
-    }
-  `;
-
-  const variables = {
-    businessName,
-    businessEmail,
-    phoneNumber,
-    password
-  };
-
-  try {
-    const response = await fetch("/api/graphql", {  // Change /api/graphql with your endpoint
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ query, variables }),
-    });
-
-    const responseData = await response.json();
-    
-    if (response.ok) {
-      // If the request is successful
-      const { token, user } = responseData.data.signUp;
-      // Proceed with the logic after successful sign-up, like redirecting
-      router.push('/verify-email');
-    } else {
-      setError(responseData.errors?.[0]?.message || "Something went wrong");
-    }
-
-  } catch (err) {
-    setError("Failed to connect to server");
-  } finally {
-    setLoading(false);
-  }
+  if (isFormValid) router.push('/verify-email');
 };
 
 
@@ -169,11 +120,7 @@ const handleSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
               <MdOutlineLock className="absolute right-3 top-1/2 -translate-y-1/2 text-gray5" />
             </div>
           </div>
-          <Button disabled={!isFormValid || loading}>
-    {loading ? "Submitting..." : "Continue"}
-  </Button>
-
-  {error && <p className="text-red-500 mt-2">{error}</p>}
+          <Button disabled={!isFormValid}>Continue</Button>
           <Button variant="outline" className="flex w-full items-center justify-center gap-2" type="button">
             <FcGoogle /> Sign in with Google
           </Button>
