@@ -39,36 +39,23 @@ const handleSignUp = (e: React.FormEvent<HTMLFormElement>) => {
 };
 
 
+
   return (
     <AuthLayout>
-      <div className="overflow-y-scroll ">
-        <Link href="/" className="text-2xl font-bold text-primary ml-4 mt-6">ReLoy Business</Link>
-        <div className="mt-12">
-          <h1 className="text-2xl font-bold text-gray-900 ml-4 ">Create a Business Account</h1>
-          <p className="text-sm text-gray-600 ml-4">Please fill in your details to create an account</p>
+      <div className="w-full">
+        <div className="mt-8 md:mt-10 lg:mt-12 mb-8">
+          <h1 className="text-xl  lg:text-[29px] font-semibold text-heading">Create your Account</h1>
+          <p className="text-xs lg:text-sm text-body">Please fill in your details to create an account</p>
         </div>
-        <form className="w-full max-w-md space-y-1 ml-4">
-          <Label htmlFor="business-email" >Business Name</Label>
-          <div className="relative flex justify-between ">
-            <Input
-              id="business-name"
-              placeholder="e.g Power House"
-              className="" 
-            />
-            <RiBriefcase4Line className="absolute right-3 top-1/2 -translate-y-1/2 text-gray5 " />
-          </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="business-email">Business Email</Label>
-            <Input id="business-email" type="email" placeholder="name@example.com" />
-            {/* <p className="text-xs text-danger">Please provide a valid email.</p> */}
-          </div>
-        </form>
+       
+
 
         <form
           className="w-full max-w-xl space-y-4"
           onSubmit={handleSignUp}
         >
+          
           <div className="space-y-2">
             <Label htmlFor="business-name">Business Name</Label>
             <div className="relative flex justify-between">
@@ -152,3 +139,4 @@ const handleSignUp = (e: React.FormEvent<HTMLFormElement>) => {
     </AuthLayout>
   );
 }
+
