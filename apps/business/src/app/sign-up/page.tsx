@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import type React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -34,7 +35,7 @@ export default function BusinessSignUp() {
     confirmPassword &&
     password === confirmPassword;
 
-const handleSignUp = async (e) => {
+const handleSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
   setLoading(true);
   setError(null);
