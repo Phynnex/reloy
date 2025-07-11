@@ -1,7 +1,5 @@
 'use client';
 import { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { SIGN_UP_MUTATION } from '@/graphql/mutations'; // Import your mutation
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -24,7 +22,8 @@ export default function BusinessSignUp() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const [signUp, { loading, error }] = useMutation(SIGN_UP_MUTATION);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   // Validation logic
   const isFormValid =
