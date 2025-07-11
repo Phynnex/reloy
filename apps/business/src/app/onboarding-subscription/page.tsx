@@ -10,7 +10,16 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 
-const plans = {
+interface Plan {
+  name: string;
+  price: string;
+  per: string;
+  features: string[];
+  planType: string;
+  type: string;
+}
+
+const plans: Record<'monthly' | 'yearly', Plan[]> = {
   monthly: [
     {
       name: 'Growth',
@@ -100,7 +109,7 @@ export default function SubscriptionPlanPage() {
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   const [showModal, setShowModal] = useState(false);
 
-  const activePlans = plans[billing];
+  const activePlans: Plan[] = plans[billing];
 
   return (
     <OnboardingLayout>
