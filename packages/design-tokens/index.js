@@ -11,9 +11,11 @@ const tokens = {
     warning: '#D46A6A',
     danger: '#FC3833',
     heading: '#030229',
-    body: '#030229B2',
+    body30: '#030229B2',
+    body: '#030229',
     gray500: '#667085',
     gray5: '#E5E5EA',
+    gray6: '#F2F2F7',
     'light-green-40': '#93D1B5',
     'light-blue': '#D1DAF4',
     black: '#1B223C',
@@ -35,13 +37,14 @@ const tokens = {
   },
   borderRadius: {
     none: '0px',
-    sm: '8px',
+    xs: '8px',
+    sm: '10px',
     md: '14px',
     lg: '24px',
     full: '9999px'
   },
   fontFamily: {
-    sans: ['Inter', 'sans-serif'],
+    sans: ['"Public Sans"', 'sans-serif'],
   },
   fontSize: {
     xs: '12px',
