@@ -71,6 +71,13 @@ importers:
       typescript:
         specifier: ^5
         version: 5.8.3
+    devDependencies:
+      '@types/node':
+        specifier: 24.0.4
+        version: 24.0.4
+      '@types/react':
+        specifier: 19.1.8
+        version: 19.1.8
 
   apps/business:
     dependencies:
@@ -104,6 +111,13 @@ importers:
       typescript:
         specifier: ^5
         version: 5.8.3
+    devDependencies:
+      '@types/node':
+        specifier: 24.0.4
+        version: 24.0.4
+      '@types/react':
+        specifier: 19.1.8
+        version: 19.1.8
 
   apps/referrer:
     dependencies:
@@ -137,6 +151,13 @@ importers:
       typescript:
         specifier: ^5
         version: 5.8.3
+    devDependencies:
+      '@types/node':
+        specifier: 24.0.4
+        version: 24.0.4
+      '@types/react':
+        specifier: 19.1.8
+        version: 19.1.8
 
   apps/web:
     dependencies:

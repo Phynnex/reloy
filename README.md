@@ -28,6 +28,25 @@ pnpm install
 pnpm --filter web dev     # or business, admin, referrer
 
 ```
+<<<<<<< HEAD
+=======
+Copy `.env.example` to `.env` and update the values for your environment:
+
+```bash
+cp .env.example .env
+# edit .env and set the variables
+```
+
+
+The default `NEXT_PUBLIC_API_URL` points to the shared API endpoint at
+`https://7bc4d325f649.ngrok-free.app/graphql`.
+
+Each app requires `NEXT_PUBLIC_API_URL` to be defined in its environment. Set
+this variable when running or deploying the app so the frontend can communicate
+with the GraphQL API server. When deploying to Vercel, add `NEXT_PUBLIC_API_URL`
+to the project settings for each app (`business`, `admin`, `referrer` and
+`web`) so Next.js receives the value during the build.
+>>>>>>> ea423b4ddfa0618c189e675fb3f8e72d24b2ae0a
 
 This project uses Tailwind CSS and the new Next.js `app` router.
 
