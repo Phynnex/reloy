@@ -41,7 +41,9 @@ The default `NEXT_PUBLIC_API_URL` points to the shared API endpoint at
 
 Each app requires `NEXT_PUBLIC_API_URL` to be defined in its environment. Set
 this variable when running or deploying the app so the frontend can communicate
-with the GraphQL API server.
+with the GraphQL API server. When deploying to Vercel, add `NEXT_PUBLIC_API_URL`
+to the project settings for each app (`business`, `admin`, `referrer` and
+`web`) so Next.js receives the value during the build.
 
 This project uses Tailwind CSS and the new Next.js `app` router.
 
