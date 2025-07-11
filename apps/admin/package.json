@@ -19,5 +19,9 @@
     "tailwindcss": "^3.3.0",
     "typescript": "^5",
     "@reloy/api": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.4",
+    "@types/react": "19.1.8"
   }
 }
