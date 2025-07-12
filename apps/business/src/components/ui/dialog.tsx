@@ -9,7 +9,7 @@ const DialogTrigger = DialogPrimitive.Trigger;
 
 const DialogPortal = ({ className, children, ...props }: DialogPrimitive.DialogPortalProps & { className?: string }) => (
   <DialogPrimitive.Portal {...props}>
-    <div className={cn("fixed inset-0 z-50 flex items-start justify-center sm:items-center", className)}>
+    <div className={cn("fixed inset-0 z-50 flex items-start justify-center sm:items-center ", className)}>
       {children}
     </div>
   </DialogPrimitive.Portal>
@@ -23,9 +23,10 @@ const DialogOverlay = React.forwardRef<
   <DialogPrimitive.Overlay
     ref={ref}
     className={cn(
-      "fixed inset-0 z-50 bg-black/50 backdrop-blur-sm",
-      className
-    )}
+  "fixed inset-0 z-50 bg-black/50 backdrop-blur-[8px]", // 10px blur to match Figma
+  className
+)}
+
     {...props}
   />
 ));
@@ -40,9 +41,9 @@ const DialogContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        "fixed z-50 grid w-full gap-4 rounded-b-lg bg-white p-6 shadow-lg duration-200 sm:max-w-lg sm:rounded-lg",
-        className
-      )}
+  "fixed z-50 grid w-full gap-4 rounded-b-lg bg-white p-6 shadow-[0_8px_40px_0_rgba(60,66,87,0.18)] duration-200 sm:max-w-lg sm:rounded-lg",
+  className
+)}
       {...props}
     >
       {children}

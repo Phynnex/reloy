@@ -6,9 +6,9 @@ import OnboardingLayout from "@/components/onboarding/OnboardingLayout";
 import { cn } from "@/lib/utils";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { FiCheck } from "react-icons/fi";
-// Solar icons are exported from the package root, so we import the Sun
-// component and alias it as SunIcon to match the existing usage.
-import { Sun as SunIcon } from '@solar-icons/react';
+import Image from 'next/image';
+import userCheck from '@reloy/ui/assets/userCheck.svg';
+
 
 interface Plan {
   name: string;
@@ -271,6 +271,7 @@ export default function SubscriptionPlanPage() {
             </button>
 
             {/* ShadCN Dialog for final step */}
+            
             <Dialog open={showModal} onOpenChange={setShowModal}>
               <DialogTrigger asChild>
                 <button
@@ -288,26 +289,32 @@ export default function SubscriptionPlanPage() {
                 </button>
               </DialogTrigger>
 
-              <DialogContent className="max-w-md w-full flex flex-col items-center gap-6 py-12">
+              <DialogContent className="max-w-md w-full flex flex-col items-center justify-center gap-6 py-12">
                 {/* Success Icon */}
-                <div className="bg-[#E7F7ED] rounded-full flex items-center justify-center w-16 h-16 mb-4">
-                  <SunIcon size={24} color="blue" />
+
+                <div className="flex justify-center">
+
+                <div className="  flex items-center justify-center">
+               <Image src={userCheck} alt="userchecker" width={110} height={21} />
+                </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-xl font-semibold mb-2">
+                  <div className="text-heading text-[20px] font-bold mb-2">
                     You're all set!
                   </div>
-                  <div className="text-gray-700 text-base mb-4">
+                  <div className="text-body text-base mb-2">
                     Your profile is ready. Start rewarding your customers and
                     growing your business.
                   </div>
                 </div>
-                <Button
-                  className="w-full"
+                <div className="flex justify-center items-center">
+                  <Button
+                  className="w-4/5 "
                   onClick={() => (window.location.href = "/dashboard")}
                 >
                   Go to Dashboard
                 </Button>
+                </div>
               </DialogContent>
             </Dialog>
           </div>
