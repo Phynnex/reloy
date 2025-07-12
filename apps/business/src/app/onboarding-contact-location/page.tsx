@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import OnboardingLayout from '@/components/onboarding/OnboardingLayout';
 import { Card } from "@/components/ui/card";
-import { Select } from "@/components/ui/select";
+import { CustomSelect } from "@/components/ui/custom-select";
 
 // Example country list, you can extend this as needed
 const countries = [
@@ -15,6 +15,9 @@ const countries = [
   { value: "id", label: "Indonesia" },
   { value: "th", label: "Thailand" },
   { value: "ph", label: "Philippines" },
+  { value: "ng", label: "Nigeria" },
+  { value: "gh", label: "Ghana" },
+
 ];
 
 export default function OnboardingContactLocation() {
@@ -87,12 +90,14 @@ export default function OnboardingContactLocation() {
           {/* Country */}
           <div>
             <Label htmlFor="country" className="block mb-2 text-sm">Country</Label>
-            <Select
-              id="country"
+            
+
+                  <CustomSelect
               options={countries}
               value={country}
-              onChange={e => setCountry(e.target.value)}
+              onChange={setCountry}
               placeholder="Select a country"
+       
             />
           </div>
           {/* Buttons */}

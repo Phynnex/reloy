@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import OnboardingLayout from '@/components/onboarding/OnboardingLayout';
 import { Card } from "@/components/ui/card";
-import { Select } from "@/components/ui/select";
+import { CustomSelect } from "@/components/ui/custom-select";
 
 const categories = [
   { value: "retail", label: "Retail" },
@@ -60,13 +60,23 @@ export default function OnboardingBusinessInfo() {
           {/* Business Category */}
           <div>
             <Label htmlFor="category" className="block mb-2 text-sm">Business category</Label>
-            <Select
+            {/* <Select
               options={categories}
               id="category"
               value={category}
               onChange={e => setCategory(e.target.value)}
               placeholder="Select a category"
-            />
+            /> */}
+
+            <CustomSelect
+  options={categories} 
+ 
+  value={category}
+  onChange={setCategory}
+  placeholder="Select a category"
+  allowCustomInput
+/>
+
           </div>
           {/* Business Type */}
           <div>
