@@ -32,43 +32,39 @@ const links = [
   { label: 'Logout', href: '/logout', icon: LogOut },
 ];
 
+
 export default function Sidebar({ open }: { open: boolean }) {
   const pathname = usePathname();
   return (
-    <aside
+     <aside
       className={cn(
-        'fixed md:static inset-y-0 left-0 z-40 bg-white dark:bg-black border-r border-gray5 transition-all duration-300',
-        open ? 'w-64' : 'w-0 md:w-0',
+        "hidden md:flex flex-col fixed top-32 left-6 z-20", 
+        "bg-white border border-gray-200 rounded-2xl shadow-sm h-[72vh] w-56 transition-all px-2 py-1",
+        open ? "opacity-100" : "opacity-0 pointer-events-none"
       )}
     >
-      <div className={cn('h-full flex flex-col', open ? 'opacity-100' : 'opacity-0 pointer-events-none')}
-           style={{ transition: 'opacity 0.3s' }}>
-        <div className="p-6">
-          <Image src={Logo} alt="logo" width={110} height={21} />
-        </div>
-        <nav className="flex-1 overflow-y-auto">
-          <ul className="space-y-2 px-4">
-            {links.map((item) => {
-              const Icon = item.icon;
-              const active = pathname === item.href;
-              return (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className={cn(
-                      'flex items-center gap-3 rounded-md px-3 py-2 text-sm text-gray500 hover:bg-gray6',
-                      active && 'bg-gray6 text-body font-medium',
-                    )}
-                  >
-                    <Icon className="w-4 h-4" />
-                    <span>{item.label}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </div>
+      <nav className="flex-1 overflow-y-auto pt-4 pb-4 hide-scrollbar">
+        <ul className="space-y-2">
+          {links.map((item) => {
+            const Icon = item.icon;
+            const active = pathname === item.href;
+            return (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={cn(
+                    "flex items-center gap-3 rounded-md px-3 py-2.5 text-sm text-[#83859C] hover:bg-[#F1F3F9]",
+                    active && "bg-[#233E97] text-white font-semibold"
+                  )}
+                >
+                  <Icon className={cn("w-5 h-5", active && "text-white")} />
+                  <span>{item.label}</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
     </aside>
   );
 }
