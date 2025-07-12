@@ -8,6 +8,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { FiCheck } from "react-icons/fi";
 import Image from 'next/image';
 import userCheck from '@reloy/ui/assets/userCheck.svg';
+import { useRouter } from 'next/navigation';
 
 
 interface Plan {
@@ -100,6 +101,7 @@ const plans: Record<"monthly" | "yearly", Plan[]> = {
 };
 
 export default function SubscriptionPlanPage() {
+  const router = useRouter();
   const [billing, setBilling] = useState<"monthly" | "yearly">("monthly");
 
   const [showModal, setShowModal] = useState(false);
@@ -310,7 +312,7 @@ export default function SubscriptionPlanPage() {
                 <div className="flex justify-center items-center">
                   <Button
                   className="w-4/5 "
-                  onClick={() => (window.location.href = "/dashboard")}
+                  onClick={() => router.push('/dashboard')}
                 >
                   Go to Dashboard
                 </Button>
