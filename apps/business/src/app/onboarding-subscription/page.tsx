@@ -6,7 +6,9 @@ import OnboardingLayout from "@/components/onboarding/OnboardingLayout";
 import { cn } from "@/lib/utils";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { FiCheck } from "react-icons/fi";
-import { SunIcon } from '@solar-icons/react/sun';
+// Solar icons are exported from the package root, so we import the Sun
+// component and alias it as SunIcon to match the existing usage.
+import { Sun as SunIcon } from '@solar-icons/react';
 
 interface Plan {
   name: string;
