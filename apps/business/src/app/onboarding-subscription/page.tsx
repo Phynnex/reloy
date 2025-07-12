@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import OnboardingLayout from "@/components/onboarding/OnboardingLayout";
@@ -101,6 +102,8 @@ const plans: Record<"monthly" | "yearly", Plan[]> = {
 
 export default function SubscriptionPlanPage() {
   const [billing, setBilling] = useState<"monthly" | "yearly">("monthly");
+
+  const router = useRouter();
 
   const [showModal, setShowModal] = useState(false);
 
@@ -265,7 +268,7 @@ export default function SubscriptionPlanPage() {
             <button
               type="button"
               className="text-primary font-medium"
-              onClick={() => history.back()}
+              onClick={() => router.back()}
             >
               Back
             </button>
