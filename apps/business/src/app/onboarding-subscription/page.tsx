@@ -9,7 +9,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { FiCheck } from "react-icons/fi";
 import Image from 'next/image';
 import userCheck from '@reloy/ui/assets/userCheck.svg';
-import { useRouter } from 'next/navigation';
+
 
 
 interface Plan {
