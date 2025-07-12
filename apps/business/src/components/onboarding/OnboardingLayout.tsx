@@ -195,13 +195,12 @@ export default function OnboardingLayout({ children }: { children: ReactNode }) 
       </aside>
 
       {/* Main Content (scrollable) */}
-      <main
-        className="flex-1 flex justify-center items-start py-10 md:py-16 bg-[#F7F9FB] overflow-y-auto hide-scrollbar"
-        style={{
-          marginLeft: SIDEBAR_WIDTH,
-          minHeight: "100vh",
-          maxHeight: "100vh",
-        }}
+        <main
+          className="flex-1 flex justify-center items-start py-10 md:py-16 bg-[#F7F9FB] overflow-y-auto hide-scrollbar md:ml-[271px]"
+          style={{
+            minHeight: "100vh",
+            maxHeight: "100vh",
+          }}
       >
         <div className="w-full max-w-4xl">{children}</div>
       </main>
