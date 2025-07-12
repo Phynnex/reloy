@@ -105,7 +105,7 @@ export default function SubscriptionPlanPage() {
   const router = useRouter();
   const [billing, setBilling] = useState<"monthly" | "yearly">("monthly");
 
-  const router = useRouter();
+
 
   const [showModal, setShowModal] = useState(false);
 
