@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '@reloy/ui/assets/logo.svg';
+import Logo from '@reloy/ui/assets/logo-white.svg';
 
 import AuthIllustration from '@reloy/ui/assets/auth/auth-illustration.svg';
 import TopRightLeftSection from '@reloy/ui/assets/auth/top-right-left-section.svg';

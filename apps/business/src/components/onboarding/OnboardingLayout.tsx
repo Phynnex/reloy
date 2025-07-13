@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import Logo from '@reloy/ui/assets/logo.svg';
+import Logo from '@reloy/ui/assets/logo-black.svg';
 import Image from "next/image";
 
 const steps = [
